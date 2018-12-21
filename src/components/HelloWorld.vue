@@ -1,5 +1,6 @@
 <template>
 <div>
+  <task></task>
   <!-- 標準入力を受け取るようにした -->
   <input v-model="msg" placeholder="タスクを入力してね">
   <p>Message is: {{ msg }}</p>
@@ -8,8 +9,13 @@
 </template>
 
 <script>
+import Task from "./Task";
 export default {
-  name: 'HelloWorld',
+  
+  components: {
+    //Taskというdomを作成
+    task: Task
+  },
   data () {
     return {
       msg: ''
