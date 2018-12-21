@@ -2,10 +2,10 @@
 <div>
     <ul>
     <input v-model="task" placeholder="追加するタスクを入力">
-    <p>Message is: {{ task }}</p>
+    <p>Add task: {{ task }}</p>
     <button v-on:click="addNewTodo">タスクを追加</button>
         <li v-for="task in list" v-bind:key="task.id">
-            {{ task.id }} {{ task.name }} {{ task.status }}
+            {{ task.id }} {{ task.name }}
         </li>
     </ul>
 </div>
