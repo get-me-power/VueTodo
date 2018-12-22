@@ -6,7 +6,7 @@
     <button  v-on:click="addNewTodo">タスクを追加</button>
         <li v-for="task in list" v-bind:key="task.id">
             <br>
-            {{ task.id }} {{ task.name }} <button  v-on:click="addNewTodo">タスクを削除</button>
+            {{ task.id }} {{ task.name }} <button  v-on:click="deleteTodo">タスクを削除</button>
         </li>
     </ul>
 </div>
@@ -32,7 +32,9 @@ methods: {
       })
     },
     deleteTodo () {
-        
+        this.list.pop({
+            id: this.list.length - 1
+        })
     }
   },
 }
