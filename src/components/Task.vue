@@ -4,11 +4,9 @@
     <input class=counter v-model="task" placeholder="追加するタスクを入力">
     <p>Add task: {{ task }}</p>
     <button  v-on:click="addNewTodo">タスクを追加</button>
-    <!-- brは改行 -->
-    <br>
-    <span>Picked: {{ picked }}</span>
         <li v-for="task in list" v-bind:key="task.id">
-            {{ task.id }} {{ task.name }}
+            <br>
+            {{ task.id }} {{ task.name }} <button  v-on:click="addNewTodo">タスクを削除</button>
         </li>
     </ul>
 </div>
@@ -32,6 +30,9 @@ methods: {
         id: this.list.length + 1,
         name: this.task
       })
+    },
+    deleteTodo () {
+        
     }
   },
 }
@@ -41,5 +42,6 @@ methods: {
 .counter {
     font-size: 26px;
     background-color: #dfd;
+
 }
 </style>
