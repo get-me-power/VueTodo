@@ -6,7 +6,9 @@
     <button  v-on:click="addNewTodo">タスクを追加</button>
         <li v-for="task in list" v-bind:key="task.id">
             <br>
-            {{ task.id }} {{ task.name }} <button  v-on:click="deleteTodo">タスクを削除</button>
+            {{ task.id }} {{ task.name }}
+            <button  v-on:click="deleteTodo">タスクを削除</button>
+
         </li>
     </ul>
 </div>
@@ -19,8 +21,6 @@ export default {
           //初期化
           task: '',
           list: [
-              {id: 1, name: '課題掃除'},
-              {id: 2, name: 'JavaFX'},
             ],
         };
     },
