@@ -1,9 +1,12 @@
 <template>
 <div>
     <ul>
-    <input v-model="task" placeholder="追加するタスクを入力">
+    <input class=counter v-model="task" placeholder="追加するタスクを入力">
     <p>Add task: {{ task }}</p>
-    <button v-on:click="addNewTodo">タスクを追加</button>
+    <button  v-on:click="addNewTodo">タスクを追加</button>
+    <!-- brは改行 -->
+    <br>
+    <span>Picked: {{ picked }}</span>
         <li v-for="task in list" v-bind:key="task.id">
             {{ task.id }} {{ task.name }}
         </li>
