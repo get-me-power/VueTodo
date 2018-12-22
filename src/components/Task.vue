@@ -7,6 +7,11 @@
         <li v-for="task in list" v-bind:key="task.id">
             <br>
             {{ task.id }} {{ task.name }}
+            <select v-model="selected">
+                <option v-for="option in options" v-bind:value="option.value">
+                    {{ option.text }}
+                </option>
+            </select>
             <button  v-on:click="deleteTodo">タスクを削除</button>
 
         </li>
@@ -22,13 +27,21 @@ export default {
           task: '',
           list: [
             ],
+          selected: '',
+          options: [
+              { text: '優先度: 低い', value: 'A' },
+              { text: '優先度: 中程度', value: 'B' },
+              { text: '優先度: 高い', value: 'C' }
+            ],
         };
     },
 methods: {
     addNewTodo () {
       this.list.push({
         id: this.list.length + 1,
-        name: this.task
+        name: this.task,
+        //priorityは優先度
+        priority: this.task
       })
     },
     deleteTodo () {
