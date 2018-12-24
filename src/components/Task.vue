@@ -12,7 +12,7 @@
                     {{ option.text }}
                 </option>
             </select>
-            <button  v-on:click="deleteTodo">タスクを削除</button>
+            <button  v-on:click="deleteTodo(task)">タスクを削除</button>
 
         </li>
     </ul>
@@ -44,10 +44,9 @@ methods: {
         priority: this.task
       })
     },
-    deleteTodo () {
-        this.list.pop({
-            id: this.list.length - 1
-        })
+    deleteTodo (task) {
+        var index = this.list.indexOf(task)
+        this.list.splice(index, 1) 
     }
   },
 }
