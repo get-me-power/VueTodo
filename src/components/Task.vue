@@ -7,8 +7,8 @@
         <li v-for="task in list" v-bind:key="task.id">
             <br>
             {{ task.id }} {{ task.name }}
-            <select v-model="selected">
-                <option v-for="option in options" v-bind:value="option.value">
+            <select v-model="task.id">
+                <option v-for="option in options" v-bind:value="task.id">
                     {{ option.text }}
                 </option>
             </select>
