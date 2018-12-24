@@ -42,7 +42,8 @@ methods: {
         name: this.task,
         //priorityは優先度
         priority: this.task
-      })
+      });
+      this.task = '';
     },
     deleteTodo (task) {
         var index = this.list.indexOf(task)
