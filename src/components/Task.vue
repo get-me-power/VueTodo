@@ -29,9 +29,10 @@ export default {
             ],
           selected: '',
           options: [
-              { text: '優先度: 低い', value: 'A' },
-              { text: '優先度: 中程度', value: 'B' },
-              { text: '優先度: 高い', value: 'C' }
+              { text: '優先度を入力', value: 'A' },
+              { text: '優先度: 低い', value: 'B' },
+              { text: '優先度: 中程度', value: 'C' },
+              { text: '優先度: 高い', value: 'D' }
             ],
         };
     },
