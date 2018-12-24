@@ -1,6 +1,6 @@
 # my-project
 
-> A Vue.js project
+> This app is todoapp
 
 ## Build Setup
 
